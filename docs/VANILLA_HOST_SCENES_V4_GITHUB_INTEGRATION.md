@@ -1,0 +1,11 @@
+# First 15 taxa — vanilla host interaction integration
+
+This draft branch integrates the previous offline V4 concept into a real NeoForge 1.21.1 repository, not just a standalone archive. It preserves the PR #43 living-microbe engine while adding a **separate** explicit 15-taxon scene scanner for Minecraft animals, original vanilla crops and generic vanilla tree leaves. No new pathogen-themed blocks.
+
+The scanner is a craftable native item available in Tools & Utilities. Right-click a chicken/wolf/cow/pig/etc or compatible crop/tree leaf to select a context from the evidence-labeled 15-item list. Subsequent ordinary clicks cycle alternatives; crouch/right-click cycles a visual phase and at final phase clears the record. Registered real animals use persistent entity NBT; plants use a capped per-dimension SavedData store. States are not medical diagnoses, actual illness rates, virus counts or transmissibility values.
+
+Server updates run at most once per 80 Minecraft game ticks. Max 96 enrolled animals per pass and 64 enrolled plants per dimension pass, with a 512 plant storage cap and rotating fairness. No forced chunks. Plant scene processing requires a nearby player; only registered players/animals/crops are affected. In one 4-frame game phase, natural crop growth can be paused; tree trunks/leaves are never replaced or damaged. Animal movement/particle hints are gentle and temporary, optionally disabled using `vanilla_host_scenes.enrolled_animal_movement_cue`. Crop pause can likewise be disabled. No player-to-player or animal-to-animal pathogen transmission is implemented.
+
+The 15 organism names are real; game mappings deliberately mark beetroots for certain non-vanilla crops and existing tree leaves for orchard diseases as **visual proxies**. Do not interpret those as verified laboratory host associations. Relevant in-game mapping is always Minecraft 1.21.1, not newer game versions.
+
+CI includes Java21 policy smoke, Python source/asset integrity, Gradle NeoForge build, dedicated server startup and graphical client startup. Game Test interaction and actual save-reload multiplayer acceptance are distinct follow-up gates. Stable main remains unchanged pending review.

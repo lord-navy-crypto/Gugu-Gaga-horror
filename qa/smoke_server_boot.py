@@ -15,6 +15,9 @@ import time
 ROOT = Path(__file__).resolve().parents[1]
 LOG = ROOT / "build" / "server-runtime-smoke.log"
 MARKER = "GUGUGAGA_RUNTIME_INIT_OK"
+SAVEDATA_MARKER = "GUGUGAGA_SPATIAL_SAVEDDATA_ROUNDTRIP_PASS"
+FOCUS_MARKER = "GUGUGAGA_FIVE_FOCUS_NATIVE_NBT_PASS"
+HEALTH_MARKER = "GUGUGAGA_ONE_HEALTH_NBT_PASS"
 READY = re.compile(r"Done \([0-9.,]+s\)! For help, type", re.I)
 MAX_SECONDS = int(os.environ.get("GUGU_BOOT_TIMEOUT", "420"))
 
@@ -37,7 +40,12 @@ def main():
             while time.monotonic() < deadline:
                 time.sleep(2)
                 log = LOG.read_text(encoding="utf-8", errors="replace")
-                if MARKER in log and READY.search(log):
+                integrated_pass = (
+                    os.environ.get("GUGU_FIELD_SELFTEST") != "1"
+                    or (SAVEDATA_MARKER in log and FOCUS_MARKER in log
+                        and HEALTH_MARKER in log)
+                )
+                if MARKER in log and READY.search(log) and integrated_pass:
                     print("GUGUGAGA_V010_REAL_SERVER_BOOT_PASS", flush=True)
                     return 0
                 if proc.poll() is not None:

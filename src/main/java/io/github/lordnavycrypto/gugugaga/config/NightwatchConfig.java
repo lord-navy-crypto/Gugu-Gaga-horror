@@ -26,6 +26,18 @@ public final class NightwatchConfig {
     public static final ModConfigSpec.BooleanValue MICROBE_ENTITY_CUES_ENABLED;
     public static final ModConfigSpec.BooleanValue PATHOGEN_GAMEPLAY_ENABLED;
     public static final ModConfigSpec.BooleanValue LIVING_MICROBE_SIMULATION;
+    public static final ModConfigSpec.BooleanValue PATHOGEN_SCENE_ENGINE_ENABLED;
+    public static final ModConfigSpec.BooleanValue PATHOGEN_SCENE_CROP_PAUSE;
+    public static final ModConfigSpec.BooleanValue PATHOGEN_SCENE_ANIMAL_CUES;
+    public static final ModConfigSpec.BooleanValue PATHOGEN_FIELD_ENABLED;
+    public static final ModConfigSpec.BooleanValue PATHOGEN_FIELD_CROP_CUES;
+    public static final ModConfigSpec.BooleanValue PATHOGEN_ROUTE_EVENTS_ENABLED;
+    public static final ModConfigSpec.BooleanValue VIRAL_GAME_WAVES_ENABLED;
+    public static final ModConfigSpec.BooleanValue VIRAL_HOST_GAME_EFFECTS_ENABLED;
+    public static final ModConfigSpec.BooleanValue ECOLOGY_EXTENSIONS_ENABLED;
+    public static final ModConfigSpec.BooleanValue FOCUS_FIVE_VISUALS_ENABLED;
+    public static final ModConfigSpec.BooleanValue ECOLOGY_CROP_GAME_FEEDBACK_ENABLED;
+    public static final ModConfigSpec.BooleanValue FIELD_PARTICLE_OVERLAY_ENABLED;
     public static final ModConfigSpec SPEC;
 
     static {
@@ -126,6 +138,74 @@ public final class NightwatchConfig {
                 +"No unobserved wild animals start infected; no pathogen transfer "
                 +"or real experimental population values.")
                 .define("enabled",true);
+        BUILDER.pop();
+        BUILDER.push("vanilla_host_scenes");
+        PATHOGEN_SCENE_ENGINE_ENABLED=BUILDER.comment(
+                "Enable manually selected, object-bound Minecraft art scenarios "
+                +"for 15 real taxon labels; never an actual infection model.")
+                .define("enabled",true);
+        PATHOGEN_SCENE_CROP_PAUSE=BUILDER.comment(
+                "A short, reversible natural growth pause on individually enrolled crops only.")
+                .define("enrolled_crop_growth_pause",true);
+        PATHOGEN_SCENE_ANIMAL_CUES=BUILDER.comment(
+                "Small, finite movement cue on explicitly enrolled animals only.")
+                .define("enrolled_animal_movement_cue",true);
+        BUILDER.pop();
+        BUILDER.push("pathogen_spatial_field");
+        PATHOGEN_FIELD_ENABLED=BUILDER.comment(
+                "Run a 15-channel 4x4-block abstract Minecraft scalar field. "
+                +"Game pressure is not real pathogen concentration or spread.")
+                .define("enabled",true);
+        PATHOGEN_FIELD_CROP_CUES=BUILDER.comment(
+                "Optional fictional growth pause in appropriate vanilla crops "
+                +"inside high-game-pressure cells. No disease diagnosis.")
+                .define("crop_game_cues",true);
+        BUILDER.pop();
+        BUILDER.push("pathogen_information_routes");
+        PATHOGEN_ROUTE_EVENTS_ENABLED=BUILDER.comment(
+                "Move abstract Minecraft game SIGNALS via loaded-region event routing. "
+                +"Air/rain/vector cues and player/animal/item-held trails are not "
+                +"pathogen transmission physics or infection.")
+                .define("enabled",true);
+        BUILDER.pop();
+        BUILDER.push("virus_game_signals");
+        VIRAL_GAME_WAVES_ENABLED=BUILDER.comment(
+                "Allow eight virus-named Minecraft information channels to form "
+                +"limited neighboring visual-data waves. These are entirely "
+                +"invented game numbers, not biological replication or rates.")
+                .define("waves_enabled",true);
+        VIRAL_HOST_GAME_EFFECTS_ENABLED=BUILDER.comment(
+                "Enable cosmetic native-animal particles, optional tiny movement "
+                +"cues, and vanilla crop growth feedback from matching viral "
+                +"game field signals. No actual infection or clinical effect.")
+                .define("host_game_cues",true);
+        BUILDER.pop();
+        BUILDER.push("ecology_taxa_extensions");
+        ECOLOGY_EXTENSIONS_ENABLED=BUILDER.comment(
+                "Enable optional fungi, parasite and phage identity plus fictional "
+                +"eight-channel numeric visual scenery. Never real infectiousness.")
+                .define("enabled",true);
+        BUILDER.pop();
+        BUILDER.push("focus_five_eco_observation");
+        FOCUS_FIVE_VISUALS_ENABLED=BUILDER.comment(
+                "Show small distinctive Minecraft-only particle art for five "
+                +"selected source-labelled plants/animals. The values are NOT "
+                +"actual pathogen concentration or clinical diagnosis.")
+                .define("visuals_enabled",true);
+        BUILDER.pop();
+        BUILDER.push("ecology_gameplay_environment");
+        ECOLOGY_CROP_GAME_FEEDBACK_ENABLED=BUILDER.comment(
+                "Optional deterministic Minecraft wheat growth game feedback "
+                +"for the pre-existing extended numerical signal. OFF by "
+                +"default. No new pathogen blocks or calibrated biology.")
+                .define("wheat_growth_feedback_enabled",false);
+        BUILDER.pop();
+        BUILDER.push("numeric_field_particles");
+        FIELD_PARTICLE_OVERLAY_ENABLED=BUILDER.comment(
+                "Allow player-initiated, per-player vanilla particle projections "
+                +"of existing numeric 4x4 game regions. Personal particle view "
+                +"defaults OFF; no new blocks, infected entities, or chunk loading.")
+                .define("viewer_enabled",true);
         BUILDER.pop();
         SPEC = BUILDER.build();
     }

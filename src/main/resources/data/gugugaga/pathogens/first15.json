@@ -1,0 +1,199 @@
+{
+  "version": 4,
+  "gameOnly": true,
+  "notRealInfection": true,
+  "description": "Vanilla object display scenarios, not a spread model",
+  "taxa": [
+    {
+      "id": "lyssavirus_rabies",
+      "ncbiTaxonId": 11292,
+      "scientificName": "Lyssavirus rabies",
+      "type": "VIRUS",
+      "minecraftEntities": [
+        "minecraft:wolf",
+        "minecraft:fox",
+        "minecraft:cat"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "influenza_a_virus",
+      "ncbiTaxonId": 11320,
+      "scientificName": "Influenza A virus",
+      "type": "VIRUS",
+      "minecraftEntities": [
+        "minecraft:chicken",
+        "minecraft:parrot"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "west_nile_virus",
+      "ncbiTaxonId": 11082,
+      "scientificName": "West Nile virus",
+      "type": "VIRUS",
+      "minecraftEntities": [
+        "minecraft:chicken",
+        "minecraft:parrot",
+        "minecraft:horse"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "foot_and_mouth_disease_virus",
+      "ncbiTaxonId": 12110,
+      "scientificName": "Foot-and-mouth disease virus",
+      "type": "VIRUS",
+      "minecraftEntities": [
+        "minecraft:cow",
+        "minecraft:pig",
+        "minecraft:sheep",
+        "minecraft:goat"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "african_swine_fever_virus",
+      "ncbiTaxonId": 10497,
+      "scientificName": "African swine fever virus",
+      "type": "VIRUS",
+      "minecraftEntities": [
+        "minecraft:pig"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "salmonella_enterica",
+      "ncbiTaxonId": 28901,
+      "scientificName": "Salmonella enterica",
+      "type": "BACTERIUM",
+      "minecraftEntities": [
+        "minecraft:chicken",
+        "minecraft:cow",
+        "minecraft:pig"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "listeria_monocytogenes",
+      "ncbiTaxonId": 1639,
+      "scientificName": "Listeria monocytogenes",
+      "type": "BACTERIUM",
+      "minecraftEntities": [
+        "minecraft:cow",
+        "minecraft:sheep",
+        "minecraft:pig"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "campylobacter_jejuni",
+      "ncbiTaxonId": 197,
+      "scientificName": "Campylobacter jejuni",
+      "type": "BACTERIUM",
+      "minecraftEntities": [
+        "minecraft:chicken",
+        "minecraft:cow"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "staphylococcus_aureus",
+      "ncbiTaxonId": 1280,
+      "scientificName": "Staphylococcus aureus",
+      "type": "BACTERIUM",
+      "minecraftEntities": [
+        "minecraft:cow",
+        "minecraft:sheep",
+        "minecraft:wolf",
+        "minecraft:cat"
+      ],
+      "minecraftBlocks": [],
+      "visualProxy": false
+    },
+    {
+      "id": "tobacco_mosaic_virus",
+      "ncbiTaxonId": 12242,
+      "scientificName": "Tobacco mosaic virus",
+      "type": "VIRUS",
+      "minecraftEntities": [],
+      "minecraftBlocks": [
+        "minecraft:beetroots"
+      ],
+      "visualProxy": true
+    },
+    {
+      "id": "cucumber_mosaic_virus",
+      "ncbiTaxonId": 12305,
+      "scientificName": "Cucumber mosaic virus",
+      "type": "VIRUS",
+      "minecraftEntities": [],
+      "minecraftBlocks": [
+        "minecraft:melon_stem",
+        "minecraft:attached_melon_stem",
+        "minecraft:pumpkin_stem",
+        "minecraft:attached_pumpkin_stem"
+      ],
+      "visualProxy": false
+    },
+    {
+      "id": "potato_virus_y",
+      "ncbiTaxonId": 12216,
+      "scientificName": "Potato virus Y",
+      "type": "VIRUS",
+      "minecraftEntities": [],
+      "minecraftBlocks": [
+        "minecraft:potatoes"
+      ],
+      "visualProxy": false
+    },
+    {
+      "id": "phytophthora_infestans",
+      "ncbiTaxonId": 4787,
+      "scientificName": "Phytophthora infestans",
+      "type": "OOMYCETE",
+      "minecraftEntities": [],
+      "minecraftBlocks": [
+        "minecraft:potatoes"
+      ],
+      "visualProxy": false
+    },
+    {
+      "id": "xanthomonas_campestris",
+      "ncbiTaxonId": 339,
+      "scientificName": "Xanthomonas campestris",
+      "type": "BACTERIUM",
+      "minecraftEntities": [],
+      "minecraftBlocks": [
+        "minecraft:beetroots"
+      ],
+      "visualProxy": true
+    },
+    {
+      "id": "erwinia_amylovora",
+      "ncbiTaxonId": 552,
+      "scientificName": "Erwinia amylovora",
+      "type": "BACTERIUM",
+      "minecraftEntities": [],
+      "minecraftBlocks": [
+        "minecraft:oak_leaves",
+        "minecraft:spruce_leaves",
+        "minecraft:birch_leaves",
+        "minecraft:jungle_leaves",
+        "minecraft:acacia_leaves",
+        "minecraft:dark_oak_leaves",
+        "minecraft:mangrove_leaves",
+        "minecraft:cherry_leaves"
+      ],
+      "visualProxy": true
+    }
+  ]
+}

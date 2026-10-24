@@ -72,5 +72,12 @@
   "item.gugugaga.living_microbe_scanner": "活体微生物野外观察器",
   "message.gugugaga.living_microbes.report": "[微生态] %s：模式=%s，细菌游戏单位=%s，噬菌体—宿主互动=%s，宿主病毒情景=%s（%s）。以上为游戏模拟指标，不代表实际检测或诊断。",
   "message.gugugaga.living_microbes.disabled": "服务器已关闭活体微生物模拟。",
-  "message.gugugaga.living_microbes.unsupported": "当前尚未支持对这种生物进行模拟。"
+  "message.gugugaga.living_microbes.unsupported": "当前尚未支持对这种生物进行模拟。",
+  "item.gugugaga.pathogen_field_scanner": "原版宿主情景观察器",
+  "message.gugugaga.pathogen_scenes.inspect": "%s — %s — 游戏情景：%s（并非实际感染诊断）",
+  "message.gugugaga.pathogen_scenes.cleared": "已清除该对象的游戏情景。",
+  "message.gugugaga.pathogen_scenes.plant_limit": "每个维度最多保存512个作物或树叶情景。",
+  "message.gugugaga.pathogen_field.observed": "所在区域的游戏数值场：%s，强度 %s/15（并非感染判定）",
+  "message.gugugaga.pathogen_field.admin": "已更新当前位置的虚拟病原体数值场。",
+  "message.gugugaga.pathogen_field.disabled": "服务器配置已关闭空间数值场计算。"
 }

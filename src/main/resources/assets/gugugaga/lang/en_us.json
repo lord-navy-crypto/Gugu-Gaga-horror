@@ -72,5 +72,12 @@
   "item.gugugaga.living_microbe_scanner": "Living Microbe Field Scanner",
   "message.gugugaga.living_microbes.report": "[Micro-ecology] %s: mode=%s, bacterial units=%s, phage-host interaction=%s, host-virus scenario=%s (%s). Game indicators, not actual laboratory detection or illness.",
   "message.gugugaga.living_microbes.disabled": "Living microbe simulation is disabled on this server.",
-  "message.gugugaga.living_microbes.unsupported": "This animal is not in the current simulation host list."
+  "message.gugugaga.living_microbes.unsupported": "This animal is not in the current simulation host list.",
+  "item.gugugaga.pathogen_field_scanner": "Vanilla Host Scene Scanner",
+  "message.gugugaga.pathogen_scenes.inspect": "%s — %s — game scene %s (not a diagnostic result)",
+  "message.gugugaga.pathogen_scenes.cleared": "The selected game scenario was cleared.",
+  "message.gugugaga.pathogen_scenes.plant_limit": "At most 512 crop/leaf scenarios can be tracked per dimension.",
+  "message.gugugaga.pathogen_field.observed": "Nearby game field: %s — pressure %s/15 (not an infection)",
+  "message.gugugaga.pathogen_field.admin": "Spatial game field updated at your current position.",
+  "message.gugugaga.pathogen_field.disabled": "Spatial game field is disabled in the server configuration."
 }
