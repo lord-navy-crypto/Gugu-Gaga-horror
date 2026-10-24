@@ -25,6 +25,7 @@ public final class NightwatchConfig {
     public static final ModConfigSpec.BooleanValue MICROBE_SATELLITES_ENABLED;
     public static final ModConfigSpec.BooleanValue MICROBE_ENTITY_CUES_ENABLED;
     public static final ModConfigSpec.BooleanValue PATHOGEN_GAMEPLAY_ENABLED;
+    public static final ModConfigSpec.BooleanValue LIVING_MICROBE_SIMULATION;
     public static final ModConfigSpec SPEC;
 
     static {
@@ -117,6 +118,13 @@ public final class NightwatchConfig {
         PATHOGEN_GAMEPLAY_ENABLED=BUILDER.comment(
                 "Enable optional Minecraft survival pathogen encounter scenes and clinic. "
                 +"No biological transmission parameters or clinical prescriptions.")
+                .define("enabled",true);
+        BUILDER.pop();
+        BUILDER.push("living_microbes");
+        LIVING_MICROBE_SIMULATION=BUILDER.comment(
+                "Enable a per-animal, scanner-enrolled Minecraft microbial population toy. "
+                +"No unobserved wild animals start infected; no pathogen transfer "
+                +"or real experimental population values.")
                 .define("enabled",true);
         BUILDER.pop();
         SPEC = BUILDER.build();

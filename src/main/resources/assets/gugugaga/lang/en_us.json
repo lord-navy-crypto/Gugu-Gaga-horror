@@ -68,5 +68,9 @@
   "message.gugugaga.pathogen.supportive_care": "Supportive-care gameplay visit completed. Recovering.",
   "message.gugugaga.pathogen.early_care": "Early care completed. Real possible rabies exposure requires prompt medical advice.",
   "message.gugugaga.pathogen.followup": "Clinical follow-up: recovery in progress.",
-  "message.gugugaga.pathogen.stage": "Medical-game stage has changed."
+  "message.gugugaga.pathogen.stage": "Medical-game stage has changed.",
+  "item.gugugaga.living_microbe_scanner": "Living Microbe Field Scanner",
+  "message.gugugaga.living_microbes.report": "[Micro-ecology] %s: mode=%s, bacterial units=%s, phage-host interaction=%s, host-virus scenario=%s (%s). Game indicators, not actual laboratory detection or illness.",
+  "message.gugugaga.living_microbes.disabled": "Living microbe simulation is disabled on this server.",
+  "message.gugugaga.living_microbes.unsupported": "This animal is not in the current simulation host list."
 }

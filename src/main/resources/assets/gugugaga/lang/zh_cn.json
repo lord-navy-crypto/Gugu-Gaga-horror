@@ -68,5 +68,9 @@
   "message.gugugaga.pathogen.supportive_care": "已完成游戏内支持性照护，进入恢复状态。",
   "message.gugugaga.pathogen.early_care": "已完成早期照护；现实中疑似狂犬病暴露需及时就医。",
   "message.gugugaga.pathogen.followup": "复查：正在恢复中。",
-  "message.gugugaga.pathogen.stage": "医疗游戏状态已变化。"
+  "message.gugugaga.pathogen.stage": "医疗游戏状态已变化。",
+  "item.gugugaga.living_microbe_scanner": "活体微生物野外观察器",
+  "message.gugugaga.living_microbes.report": "[微生态] %s：模式=%s，细菌游戏单位=%s，噬菌体—宿主互动=%s，宿主病毒情景=%s（%s）。以上为游戏模拟指标，不代表实际检测或诊断。",
+  "message.gugugaga.living_microbes.disabled": "服务器已关闭活体微生物模拟。",
+  "message.gugugaga.living_microbes.unsupported": "当前尚未支持对这种生物进行模拟。"
 }

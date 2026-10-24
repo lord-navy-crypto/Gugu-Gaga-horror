@@ -166,6 +166,13 @@ jobs:
             src/main/java/io/github/lordnavycrypto/gugugaga/microbes/PathogenGameplayPolicy.java \
             qa/java/PathogenGameplaySmoke.java
           java -cp build/pathogen-medical-smoke PathogenGameplaySmoke
+      - name: Test real-mob-attached microbe population GAME engine (Java21)
+        run: |
+          mkdir -p build/living-microbe-smoke
+          javac -d build/living-microbe-smoke \
+            src/main/java/io/github/lordnavycrypto/gugugaga/microbes/LivingMicrobePopulation.java \
+            qa/java/LivingMicrobePopulationSmoke.java
+          java -cp build/living-microbe-smoke LivingMicrobePopulationSmoke
       - name: Compile and package NeoForge mod
         run: gradle --no-daemon --stacktrace build
       - uses: actions/upload-artifact@v4
